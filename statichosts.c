@@ -551,7 +551,7 @@ int Hosts_GetFromContainer(HostsContainer *Container, ThreadContext *Context, in
 
 	if( MatchState == MATCH_STATE_NONE )
 	{
-		return MATCH_STATE_DISABLED;
+		return MATCH_STATE_NONE;
 	}
 
 	if( MatchState == MATCH_STATE_PERFECT )
