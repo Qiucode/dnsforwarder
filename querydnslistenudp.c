@@ -132,7 +132,8 @@ static int Query(ThreadContext *Context, CompatibleAddr *ClientAddr)
 	RequestingDomain[0] = '\0';
 	DNSGetHostName(Context -> RequestEntity,
 				   DNSJumpHeader(Context -> RequestEntity),
-				   RequestingDomain
+				   RequestingDomain,
+				   sizeof(RequestingDomain)
 				   );
 
 	StrToLower(RequestingDomain);

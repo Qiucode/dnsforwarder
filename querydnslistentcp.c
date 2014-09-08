@@ -122,7 +122,8 @@ static int Query(ThreadContext *Context, uint16_t TCPLength, SOCKET *ClientSocke
 	RequestingDomain[0] = '\0';
 	DNSGetHostName(Context -> RequestEntity,
 				   DNSJumpHeader(Context -> RequestEntity),
-				   RequestingDomain
+				   RequestingDomain,
+				   sizeof(RequestingDomain)
 				   );
 
 	Context -> RequestingDomain = RequestingDomain;
